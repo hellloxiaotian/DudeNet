@@ -40,52 +40,52 @@
 ### Color blind denoising
 #### python test_c.py --num_of_layers 17 --logdir cblind --test_data Set68 --test_noiseL 15  
 
-### Network architecture
+### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
 
-#### Real noisy images
+#### 2. Real noisy images
 ![RUNOOB 图标](./results/fig2.jpg)
 
-### Effectiveness of key techniques in the DudeNet for image denoising
+### 3. Effectiveness of key techniques in the DudeNet for image denoising
 ![RUNOOB 图标](./results/Table1.jpg)
 
-### Run-time of key techniques in the DudeNet for different sizes noisy images
+### 4. Run-time of key techniques in the DudeNet for different sizes noisy images
 ![RUNOOB 图标](./results/Table2.jpg)
 
 
 ### Test Results
-#### 1. DudeNet for BSD68
+#### 5. DudeNet for BSD68
 ![RUNOOB 图标](./results/Table4.jpg)
 
-#### 2. DudeNet for Set12
+#### 6. DudeNet for Set12
 ![RUNOOB 图标](./results/Table5.jpg)
 
-#### 3. DudeNet for CBSD68 and Kodak24
+#### 7. DudeNet for CBSD68 and Kodak24
 ![RUNOOB 图标](./results/Table6.jpg)
 
-#### 4. DudeNet for real noisy images 
+#### 8. DudeNet for real noisy images 
 ![RUNOOB 图标](./results/Table7.jpg)
 
-#### 5. Running time of DudeNet for a noisy image of different sizes.
+#### 9. Run-time of DudeNet for a noisy image of different sizes.
 ![RUNOOB 图标](./results/Table9.jpg)
 
-### Complexity analysis of different networks.
+### 10.Complexity analysis of different networks.
 ![RUNOOB 图标](./results/Table3.jpg)
 
-#### 6. Complexity of DudeNet
+#### 11. Complexity of DudeNet
 ![RUNOOB 图标](./results/7complexity.jpg)
 
 
-#### 7. Visual results of Set12
+#### 12. Visual results of Set12
 ![RUNOOB 图标](./results/fig3.jpg)
 
-#### 10. Visual results of BSD68
+#### 13. Visual results of BSD68
 ![RUNOOB 图标](./results/fig4.jpg)
 
-#### 11. Visual results of CBSD68
+#### 14. Visual results of CBSD68
 ![RUNOOB 图标](./results/fig5.jpg)
 
-#### 12. Visual results of Kodak24 
+#### 15. Visual results of Kodak24 
 ![RUNOOB 图标](./results/fig6.jpg)
 
 ### If you cite this paper, please the following format:  
