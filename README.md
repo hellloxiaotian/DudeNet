@@ -88,14 +88,12 @@
 #### 15. Visual results of Kodak24 
 ![RUNOOB 图标](./results/fig6.jpg)
 
-### If you cite this paper, please the following format:  
-#### 1.Tian C, Xu Y, Li Z, et al. Attention-guided CNN for image denoising[J]. Neural Networks, 2020, 124,177-129.  
-#### 2.@article{tian2020attention,
-####  title={Attention-guided CNN for image denoising},
-####  author={Tian, Chunwei and Xu, Yong and Li, Zuoyong and Zuo, Wangmeng and Fei, Lunke and Liu, Hong},
-####  journal={Neural Networks},
-#### volume={124},
-#### pages={177--129},
-####  year={2020},
-####  publisher={Elsevier}
-####  }
+### If you cite this paper, please refer to the following formats: 
+#### 1.Tian C, Xu Y, Zuo W, et al. Designing and Training of A Dual CNN for Image Denoising[J]. arXiv preprint arXiv:2007.03951, 2020.
+
+#### 2. @article{tian2020designing,
+####    title={Designing and Training of A Dual CNN for Image Denoising},
+####    author={Tian, Chunwei and Xu, Yong and Zuo, Wangmeng and Du, Bo and Lin, Chia-Wen and Zhang, David},
+####    journal={arXiv preprint arXiv:2007.03951},
+####    year={2020}
+####    }
