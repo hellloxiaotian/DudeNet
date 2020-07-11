@@ -3,7 +3,10 @@
 ## This paper is conducted by Chunwei Tian, Yong Xu, Wangmeng Zuo, Bo Du, Chia-wen Lin and David Zhang. It is implemented by Pytorch. And it is reported by Cver at https://wx.zsxq.com/mweb/views/topicdetail/topicdetail.html?topic_id=841142121551482&group_id=142181451122&user_id=28514284588581&from=timeline.
 
 ## Absract
-### Deep convolutional neural networks (CNNs) for image denoising have recently attracted increasing research interest. However, plain networks cannot recover ﬁne details for a complex task, such as real noisy images. In this paper, we propose a Dual denoising Network (DudeNet) to recover a clean image. Speciﬁcally, DudeNet consists of four modules: a feature extraction block, an enhancement block, a compression block, and a reconstruction block. The feature extraction block with a sparse mechanism extracts global and local features via two sub-networks. The enhancement block gathers and fuses the global and local features to provide complementary informationforthelatternetwork.Thecompressionblockreﬁnes the extracted information and compresses the network. Finally, the reconstruction block is utilized to reconstruct a denoised image. The DudeNet has the following advantages: (1) The dual networks with a parse mechanism can extract complementary features to enhance the generalized ability of denoiser. (2) Fusing global and local features can extract salient features to recover ﬁne details for complex noisy images. (3) A Small-size ﬁlter is used to reduce the complexity of denoiser. Extensive experiments demonstrate the superiority of DudeNet over existing current state-of-the-art denoising methods.
+### Deep convolutional neural networks (CNNs) for image denoising have recently attracted increasing research interest. However, plain networks cannot recover ﬁne details for a ### complex task, such as real noisy images. In this paper, we propose a Dual denoising Network (DudeNet) to recover a clean image. Speciﬁcally, DudeNet consists of four
+### modules: a feature extraction block, an enhancement block, a compression block, and a reconstruction block. The feature extraction block with a sparse mechanism extracts 
+### global and local features via two sub-networks. The enhancement block gathers and fuses the global and local features to provide complementary
+### informationforthelatternetwork.Thecompressionblockreﬁnes the extracted information and compresses the network. Finally, the reconstruction block is utilized to reconstruct a ### denoised image. The DudeNet has the following advantages: (1) The dual networks with a parse mechanism can extract complementary features to enhance the generalized ability ### of denoiser. (2) Fusing global and local features can extract salient features to recover ﬁne details for complex noisy images. (3) A Small-size ﬁlter is used to reduce the ### complexity of denoiser. Extensive experiments demonstrate the superiority of DudeNet over existing current state-of-the-art denoising methods.
 
 ## Requirements (Pytorch)  
 #### Pytorch 0.41
@@ -38,53 +41,52 @@
 #### python test_c.py --num_of_layers 17 --logdir cblind --test_data Set68 --test_noiseL 15  
 
 ### Network architecture
-![RUNOOB 图标](./resluts/fig1.jpg)
+![RUNOOB 图标](./results/fig1.jpg)
 
 #### Real noisy images
-![RUNOOB 图标](./resluts/fig2.jpg)
+![RUNOOB 图标](./results/fig2.jpg)
 
 ### Effectiveness of key techniques in the DudeNet for image denoising
-![RUNOOB 图标](./resluts/Table1.jpg)
+![RUNOOB 图标](./results/Table1.jpg)
 
 ### Run-time of key techniques in the DudeNet for different sizes noisy images
-![RUNOOB 图标](./resluts/Table2.jpg)
+![RUNOOB 图标](./results/Table2.jpg)
+
 
 ### Test Results
-#### 1. ADNet for BSD68
-![RUNOOB 图标](./networkandresult/2BSD.png)
+#### 1. DudeNet for BSD68
+![RUNOOB 图标](./results/Table4.jpg)
 
-#### 2. ADNet for Set12
-![RUNOOB 图标](./networkandresult/3Set12.png)
+#### 2. DudeNet for Set12
+![RUNOOB 图标](./results/Table5.jpg)
 
-#### 3. ADNet for CBSD68, Kodak24 and McMaster
-![RUNOOB 图标](./networkandresult/4color.png)
+#### 3. DudeNet for CBSD68 and Kodak24
+![RUNOOB 图标](./results/Table6.jpg)
 
-#### 4. ADNet for CBSD68, Kodak24 and McMaster
-![RUNOOB 图标](./networkandresult/5realnoisy.png)
+#### 4. DudeNet for real noisy images 
+![RUNOOB 图标](./results/Table7.jpg)
 
-#### 5. Running time of ADNet for a noisy image of different sizes.
-![RUNOOB 图标](./networkandresult/6ruungtime.png)
+#### 5. Running time of DudeNet for a noisy image of different sizes.
+![RUNOOB 图标](./results/Table9.jpg)
 
-#### 6. Complexity of ADNet
-![RUNOOB 图标](./networkandresult/7complexity.png)
+### Complexity analysis of different networks.
+![RUNOOB 图标](./results/Table3.jpg)
 
-#### 7. 9 real noisy images
-![RUNOOB 图标](./networkandresult/8realnoisy.png)
+#### 6. Complexity of DudeNet
+![RUNOOB 图标](./results/7complexity.jpg)
 
-#### 8. 9 thermodynamic images from the proposed A
-![RUNOOB 图标](./networkandresult/9ab.png)
 
-#### 9. Visual results of BSD68
-![RUNOOB 图标](./networkandresult/9gray.png)
+#### 7. Visual results of Set12
+![RUNOOB 图标](./results/fig3.jpg)
 
-#### 10. Visual results of Set12
-![RUNOOB 图标](./networkandresult/10gray.png)
+#### 10. Visual results of BSD68
+![RUNOOB 图标](./results/fig4.jpg)
 
-#### 11. Visual results of Kodak24
-![RUNOOB 图标](./networkandresult/11.png)
+#### 11. Visual results of CBSD68
+![RUNOOB 图标](./results/fig5.jpg)
 
-#### 12. Visual results of McMaster 
-![RUNOOB 图标](./networkandresult/12.png)
+#### 12. Visual results of Kodak24 
+![RUNOOB 图标](./results/fig6.jpg)
 
 ### If you cite this paper, please the following format:  
 #### 1.Tian C, Xu Y, Li Z, et al. Attention-guided CNN for image denoising[J]. Neural Networks, 2020, 124,177-129.  
