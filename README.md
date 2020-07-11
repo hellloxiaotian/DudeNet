@@ -72,20 +72,16 @@
 ### 10.Complexity analysis of different networks.
 ![RUNOOB 图标](./results/Table3.jpg)
 
-#### 11. Complexity of DudeNet
-![RUNOOB 图标](./results/7complexity.jpg)
-
-
-#### 12. Visual results of Set12
+#### 11. Visual results of Set12
 ![RUNOOB 图标](./results/fig3.jpg)
 
-#### 13. Visual results of BSD68
+#### 12. Visual results of BSD68
 ![RUNOOB 图标](./results/fig4.jpg)
 
-#### 14. Visual results of CBSD68
+#### 13. Visual results of CBSD68
 ![RUNOOB 图标](./results/fig5.jpg)
 
-#### 15. Visual results of Kodak24 
+#### 14. Visual results of Kodak24 
 ![RUNOOB 图标](./results/fig6.jpg)
 
 ### If you cite this paper, please refer to the following formats: 
