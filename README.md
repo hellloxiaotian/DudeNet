@@ -43,7 +43,7 @@
 ### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
 
-#### 2. Real noisy images
+### 2. Real noisy images
 ![RUNOOB 图标](./results/fig2.jpg)
 
 ### 3. Effectiveness of key techniques in the DudeNet for image denoising
