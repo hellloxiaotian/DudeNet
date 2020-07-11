@@ -38,7 +38,16 @@
 #### python test_c.py --num_of_layers 17 --logdir cblind --test_data Set68 --test_noiseL 15  
 
 ### Network architecture
-![RUNOOB 图标](./networkandresult/1.png)
+![RUNOOB 图标](./resluts/fig1.jpg)
+
+#### Real noisy images
+![RUNOOB 图标](./resluts/fig2.jpg)
+
+### Effectiveness of key techniques in the DudeNet for image denoising
+![RUNOOB 图标](./resluts/Table1.jpg)
+
+### Run-time of key techniques in the DudeNet for different sizes noisy images
+![RUNOOB 图标](./resluts/Table2.jpg)
 
 ### Test Results
 #### 1. ADNet for BSD68
