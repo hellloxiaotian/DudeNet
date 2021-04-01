@@ -32,7 +32,7 @@
 
 #### The training dataset of real noisy images is downloaded at 
 
-#### The test dataset of real noisy images  is downloaded at 
+#### The test dataset of real noisy images  is downloaded at https://drive.google.com/file/d/17DE-SV85Slu2foC0F0Ftob5VmRrHWI2h/view?usp=sharing (google drive) 
 
 
 ### Train DuDeNet-S (DuDeNet with known noise level)
