@@ -20,6 +20,19 @@
 #### The  training dataset of the gray noisy images is downloaded at https://pan.baidu.com/s/1nkY-b5_mdzliL7Y7N9JQRQ or https://drive.google.com/open?id=1_miSC9_luoUHSqMG83kqrwYjNoEus6Bj (google drive)
 #### The  training dataset of the color noisy images is downloaded at https://pan.baidu.com/s/1ou2mK5JUh-K8iMu8-DMcMw (baiduyun) or https://drive.google.com/open?id=1S1_QrP-fIXeFl5hYY193lr07KyZV8X8r (google drive) 
 
+#### Test dataset of Set68 is downloaded at 
+
+#### Test dataset of Set12 is downloaded at 
+
+#### Test dataset of CBSD68 is downloaded at 
+
+#### Test dataset of Kodak24 is downloaded at 
+
+#### The training dataset of real noisy images is downloaded at 
+
+#### The test dataset of real noisy images  is downloaded at 
+
+
 ### Train DuDeNet-S (DuDeNet with known noise level)
 #### python train.py --prepropcess True --num_of_layers 17 --mode S --noiseL 25 --val_noiseL 25    
 
