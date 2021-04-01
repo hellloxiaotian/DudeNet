@@ -30,7 +30,7 @@
 
 #### Test dataset of Kodak24 is downloaded at https://drive.google.com/file/d/1F4_mv4oTXhiG-zyG9DI4OO05KqvEKhs9/view?usp=sharing (google drive) 
 
-#### The training dataset of real noisy images is downloaded at 
+#### The training dataset of real noisy images is downloaded at https://drive.google.com/file/d/19MA-Rgfc89sW9GJHpj_QedFyo-uoS8o7/view?usp=sharing （google drive）
 
 #### The test dataset of real noisy images  is downloaded at https://drive.google.com/file/d/17DE-SV85Slu2foC0F0Ftob5VmRrHWI2h/view?usp=sharing (google drive) 
 
