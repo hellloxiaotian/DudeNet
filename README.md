@@ -5,6 +5,8 @@
 ## Absract
 ### Deep convolutional neural networks (CNNs) for image denoising have recently attracted increasing research interest. However, plain networks cannot recover ﬁne details for a complex task, such as real noisy images. In this paper, we propose a Dual denoising Network (DudeNet) to recover a clean image. Speciﬁcally, DudeNet consists of four modules: a feature extraction block, an enhancement block, a compression block, and a reconstruction block. The feature extraction block with a sparse mechanism extracts global and local features via two sub-networks. The enhancement block gathers and fuses the global and local features to provide complementary information for the latter network.The compression block reﬁnes the extracted information and compresses the network. Finally, the reconstruction block is utilized to reconstruct a denoised image. The DudeNet has the following advantages: (1) The dual networks with a parse mechanism can extract complementary features to enhance the generalized ability of denoiser. (2) Fusing global and local features can extract salient features to recover ﬁne details for complex noisy images. (3) A Small-size ﬁlter is used to reduce the complexity of denoiser. Extensive experiments demonstrate the superiority of DudeNet over existing current state-of-the-art denoising methods.
 
+## The codes are released next week. 
+
 ## Requirements (Pytorch)  
 #### Pytorch 0.41
 #### Python 2.7
