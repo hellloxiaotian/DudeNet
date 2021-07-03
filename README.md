@@ -99,11 +99,14 @@
 ![RUNOOB 图标](./results/fig6.jpg)
 
 ### If you cite this paper, please refer to the following formats: 
-#### 1.Tian C, Xu Y, Zuo W, et al. Designing and Training of A Dual CNN for Image Denoising[J]. arXiv preprint arXiv:2007.03951, 2020.
+#### 1.Tian, Chunwei, et al. "Designing and training of a dual CNN for image denoising." Knowledge-Based Systems 226 (2021): 106949.
 
-#### 2. @article{tian2020designing,
-####    title={Designing and Training of A Dual CNN for Image Denoising},
-####    author={Tian, Chunwei and Xu, Yong and Zuo, Wangmeng and Du, Bo and Lin, Chia-Wen and Zhang, David},
-####    journal={arXiv preprint arXiv:2007.03951},
-####    year={2020}
-####    }
+#### 2. @article{tian2021designing,
+#### title={Designing and training of a dual CNN for image denoising},
+#### author={Tian, Chunwei and Xu, Yong and Zuo, Wangmeng and Du, Bo and Lin, Chia-Wen and Zhang, David},
+#### journal={Knowledge-Based Systems},
+#### volume={226},
+#### pages={106949},
+#### year={2021},
+#### publisher={Elsevier}
+#### }
