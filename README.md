@@ -51,7 +51,7 @@
 ### Test DudeNet-S (DuDeNet with known noise level)
 #### python test.py --num_of_layers 17 --logdir gray_certrain_noise/g15 --test_data Set68 --test_noiseL 15 
 ### Test DudeNet-S for gray blind denoising
-#### python test_b.py --num_of_layers 17 --logdir blind noise/ --test_data Set68 --test_noiseL 25   
+#### python test_b.py --num_of_layers 17 --logdir blind_noise/ --test_data Set68 --test_noiseL 25   
 ### -------------------------------------------------------------------------------------------------------
 ### Train DudeNet-S or DuDeNet-B for color image denoising 
 ### Copying training color noisy images into DudeNet/color/data
@@ -69,14 +69,14 @@
 #### python test_gc.py --num_of_layers 17 --logdir color_blind_noise --test_data Set68 --test_noiseL 15  
 ### -------------------------------------------------------------------------------------------------------
 ### Train DuDeNet for real-noisy image denoising
-### Copying training real noisy images into real_noisy/data
+### Copying training real noisy images into  DudeNet/real_noisy/data
 #### python train_r.py --prepropcess True --num_of_layers 17 --mode S --noiseL 25 --val_noiseL 25  
-##### (Specifically, --val_noiseL 25 is not meaningful)  
+##### (Specifically, --val_noiseL 25 is not meaningful, which is only ued to guarantee the same format of command paramters.)  
 
 ### Test DuDeNet for real-noisy image denoising
-### Copying test real noisy images into real_noisy/data 
+### Copying test real noisy images into  DudeNet/real_noisy/data 
 #### python test_c.py --num_of_layers 17 --logdir real_model --test_data cc --test_noiseL 25 
-##### (Specifically, --test_noiseL 25 is not meaningful) 
+##### (Specifically, --test_noiseL 25 is not meaningful, which is only ued to guarantee the same format of command paramters.) 
 ### -------------------------------------------------------------------------------------------------------
 ### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
