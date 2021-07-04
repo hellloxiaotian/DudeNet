@@ -49,12 +49,12 @@
 ### Gray noisy images
 #### python test.py --num_of_layers 17 --logdir g15 --test_data Set68 --test_noiseL 15 
 ### Gray blind denoising
-#### python test_Gb.py --num_of_layers 17 --logdir gblind --test_data Set68 --test_noiseL 25   
+#### python test_Gb.py --num_of_layers 17 --logdir gb --test_data Set68 --test_noiseL 25   
 
 ### Color noisy images
-#### python test_c.py --num_of_layers 17 --logdir g15 --test_data Set68 --test_noiseL 15 
+#### python test_c.py --num_of_layers 17 --logdir c15 --test_data Set68 --test_noiseL 15 
 ### Color blind denoising
-#### python test_c.py --num_of_layers 17 --logdir cblind --test_data Set68 --test_noiseL 15  
+#### python test_c.py --num_of_layers 17 --logdir cb --test_data Set68 --test_noiseL 15  
 
 ### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
