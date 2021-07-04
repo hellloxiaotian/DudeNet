@@ -7,13 +7,13 @@ import torch
 import torch.nn as nn
 import  time #tcw20182159tcw
 from torch.autograd import Variable
-from models import DnCNN
+from models import DudeNet
 from utils import *
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 
-parser = argparse.ArgumentParser(description="DnCNN_Test")
+parser = argparse.ArgumentParser(description="DudeNet_Test")
 parser.add_argument("--num_of_layers", type=int, default=17, help="Number of total layers")
 parser.add_argument("--logdir", type=str, default="logs", help='path of log files')
 parser.add_argument("--test_data", type=str, default='cc-noisy', help='test on Set12 or Set68')
@@ -31,7 +31,7 @@ def main():
         os.mkdir(aa)
     save_dir = aa + 'sigma' + str(opt.test_noiseL) + '_' + time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime()) + '/'
         os.mkdir(save_dir)
-    net = DnCNN(channels=3, num_of_layers=opt.num_of_layers)
+    net = DudeNet(channels=3, num_of_layers=opt.num_of_layers)
     device_ids = [0]
     model = nn.DataParallel(net, device_ids=device_ids).cuda()
     model.load_state_dict(torch.load(os.path.join(opt.logdir, 'model_1.pth')))
