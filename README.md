@@ -38,15 +38,31 @@
 
 #### The test dataset of real noisy images  is downloaded at https://drive.google.com/file/d/17DE-SV85Slu2foC0F0Ftob5VmRrHWI2h/view?usp=sharing (google drive) 
 
+### -------------------------------------------------------------------------------------------------------
+### Train DudeNet-S or DuDeNet-B for gray image denoising 
+### Copying training gray noisy images into DudeNet/gray/data
+### Train DudeNet-S (DuDeNet with known noise level)
+#### python train.py --prepropcess True --num_of_layers 17 --mode S --noiseL 25 --val_noiseL 25    
 
+### Train DudeNet-B (DnCNN with blind noise level)
+#### python train.py --preprocess True --num_of_layers 17 --mode B --val_noiseL 25
+
+### Test DudeNet-S or DuDeNet-B for gray image denoising 
+### Copying test gray noisy images into DudeNet/gray/data
+#### python test.py --num_of_layers 17 --logdir gray_certrain_noise/g15 --test_data Set68 --test_noiseL 15 
+### Gray blind denoising
+#### python test_b.py --num_of_layers 17 --logdir blind noise/ --test_data Set68 --test_noiseL 25   
+### -------------------------------------------------------------------------------------------------------
+### Train DudeNet-S or DuDeNet-B for gray image denoising 
 ### Train DuDeNet-S (DuDeNet with known noise level)
 #### python train.py --prepropcess True --num_of_layers 17 --mode S --noiseL 25 --val_noiseL 25    
 
-### Train DuDeNet-B (DnCNN with blind noise level)
+### Train DudeNet-B (DnCNN with blind noise level)
 #### python train.py --preprocess True --num_of_layers 17 --mode B --val_noiseL 25
-
+### -------------------------------------------------------------------------------------------------------
 ### Test 
 ### Gray noisy images
+### Copying testing gray noisy images into DudeNet/gray/data
 #### python test.py --num_of_layers 17 --logdir g15 --test_data Set68 --test_noiseL 15 
 ### Gray blind denoising
 #### python test_Gb.py --num_of_layers 17 --logdir gb --test_data Set68 --test_noiseL 25   
