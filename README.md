@@ -49,28 +49,26 @@
 
 ### Test DudeNet-S or DuDeNet-B for gray image denoising 
 ### Copying test gray noisy images into DudeNet/gray/data
+### Test DudeNet-S (DuDeNet with known noise level)
 #### python test.py --num_of_layers 17 --logdir gray_certrain_noise/g15 --test_data Set68 --test_noiseL 15 
-### Gray blind denoising
+### Test DudeNet-S for gray blind denoising
 #### python test_b.py --num_of_layers 17 --logdir blind noise/ --test_data Set68 --test_noiseL 25   
 ### -------------------------------------------------------------------------------------------------------
-### Train DudeNet-S or DuDeNet-B for gray image denoising 
-### Train DuDeNet-S (DuDeNet with known noise level)
+### Train DudeNet-S or DuDeNet-B for color image denoising 
+### Copying training color noisy images into DudeNet/color/data
+### Train DuDeNet-S (DuDeNet with known noise level) for color image denoising
 #### python train.py --prepropcess True --num_of_layers 17 --mode S --noiseL 25 --val_noiseL 25    
 
-### Train DudeNet-B (DnCNN with blind noise level)
+### Train DudeNet-B (DnCNN with blind noise level) for color image denoising 
 #### python train.py --preprocess True --num_of_layers 17 --mode B --val_noiseL 25
-### -------------------------------------------------------------------------------------------------------
-### Test 
-### Gray noisy images
-### Copying testing gray noisy images into DudeNet/gray/data
-#### python test.py --num_of_layers 17 --logdir g15 --test_data Set68 --test_noiseL 15 
-### Gray blind denoising
-#### python test_Gb.py --num_of_layers 17 --logdir gb --test_data Set68 --test_noiseL 25   
 
+### Test DudeNet-S or DuDeNet-B for color image denoising 
+### Copying test color noisy images into DudeNet/color/data
 ### Color noisy images
-#### python test_c.py --num_of_layers 17 --logdir c15 --test_data Set68 --test_noiseL 15 
+#### python test_c.py --num_of_layers 17 --logdir certain_noise/c15 --test_data Set68 --test_noiseL 15 
 ### Color blind denoising
-#### python test_c.py --num_of_layers 17 --logdir cb --test_data Set68 --test_noiseL 15  
+#### python test_gc.py --num_of_layers 17 --logdir color_blind_noise --test_data Set68 --test_noiseL 15  
+### -------------------------------------------------------------------------------------------------------
 
 ### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
