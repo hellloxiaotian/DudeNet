@@ -12,14 +12,14 @@ from torch.autograd import Variable
 from torch.utils.data import DataLoader
 #from tensorboardX import SummaryWriter
 from torch.nn.modules.loss import _Loss #TCW20180913TCW
-from models import DnCNN
+from models import DudeNet
 from dataset_r import ImageDataset #tcw201812041630
 from utils import *
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-parser = argparse.ArgumentParser(description="DnCNN")
+parser = argparse.ArgumentParser(description="DudeNet")
 parser.add_argument("--preprocess", type=bool, default=False, help='run prepare_data or not')
 parser.add_argument("--batchSize", type=int, default=128, help="Training batch size")
 parser.add_argument("--num_of_layers", type=int, default=17, help="Number of total layers")
@@ -62,7 +62,7 @@ def main():
     print('Loading dataset ...\n')
     aa = "data"
     train_loader = DataLoader(ImageDataset(aa, noisy_image= "fadnettrain_noisyimages",clean_image="fadnettrain_labelimages"),batch_size =opt.batchSize,shuffle=True,num_workers=4) 
-    net = DnCNN(channels=3, num_of_layers=opt.num_of_layers)
+    net = DudeNet(channels=3, num_of_layers=opt.num_of_layers)
     criterion = nn.MSELoss(size_average=False)
     device_ids = [0]
     model = nn.DataParallel(net, device_ids=device_ids).cuda()
