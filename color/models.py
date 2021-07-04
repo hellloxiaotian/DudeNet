@@ -68,9 +68,9 @@ class Self_Attn(nn.Module):
         out = self.gamma*out + x
         return out, attention
 
-class DnCNN(nn.Module):
+class DudeNet(nn.Module):
     def __init__(self, channels, num_of_layers=15):
-        super(DnCNN, self).__init__()
+        super(DudeNet, self).__init__()
         kernel_size = 3
         padding = 1
         features = 64
