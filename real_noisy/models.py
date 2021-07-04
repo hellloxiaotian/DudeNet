@@ -68,9 +68,9 @@ class Self_Attn(nn.Module):
         out = self.gamma*out + x
         return out, attention
 
-class DnCNN(nn.Module):
+class DudeNet(nn.Module):
     def __init__(self, channels, num_of_layers=15):
-        super(DnCNN, self).__init__()
+        super(DudeNet, self).__init__()
         kernel_size = 3
         padding = 1
         features = 64
@@ -118,50 +118,7 @@ class DnCNN(nn.Module):
         self.conv2_17 = nn.Conv2d(in_channels=features,out_channels=3,kernel_size=1,padding=0,groups=groups,bias=False)
         self.conv3_1 = nn.Conv2d(in_channels=2*features,out_channels=3,kernel_size=1,padding=0,groups=groups,bias=False)
         self.conv3_2 = nn.Conv2d(in_channels=6,out_channels=3,kernel_size=1,padding=0,groups=groups,bias=False)
-        '''
-        self.conv3_1 =  nn.Sequential(nn.Conv2d(in_channels=2*features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_2 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_3 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_4 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_5 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_6 = nn.Conv2d(in_channels=features,out_channels=1,kernel_size=kernel_size,padding=1,groups=groups,bias=False)
-        '''
-        '''
-        self.conv3_1 = nn.Sequential(nn.Conv2d(in_channels=2,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_2 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_3 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_4 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_5 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=1,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv3_6 = nn.Conv2d(in_channels=features,out_channels=1,kernel_size=kernel_size,padding=1,groups=groups,bias=False)
-        '''
-        '''
-        self.conv1_1 = nn.Sequential(nn.Conv2d(in_channels=channels,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv1_2 = self._make_layers(Conv_BN_Relu_other,features, kernel_size,num_of_layers=15,padding=1,groups=groups,bias=False)        
-        self.conv1_3 = nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,stride=1,padding=1,groups=groups,bias=True)
-        '''
-        '''
-        self.conv2_1 = nn.Sequential(nn.Conv2d(in_channels=channels,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_2 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_3 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_4 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_5 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_6 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_7 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_8 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_9 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_10 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_11 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_12 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_13 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_14 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        self.conv2_15 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=features,kernel_size=kernel_size,padding=padding,groups=groups,bias=False),nn.BatchNorm2d(features),nn.ReLU(inplace=True))
-        #self.conv2_16 = nn.Sequential(nn.Conv2d(in_channels=features,out_channels=1,kernel_size=kernel_size,padding=1,groups=groups,bias=True),nn.BatchNorm2d(1),nn.ReLU(inplace=True))
-        self.conv2_16 = nn.Conv2d(in_channels=features,out_channels=1,kernel_size=kernel_size,padding=1,groups=groups,bias=True)
-        self.conv4 = nn.Conv2d(in_channels=2,out_channels=1,kernel_size=1,stride=1,padding=0,groups=1,bias=True)
-        #self.relu = nn.ReLU(inplace=True)
-        #self.softmax = nn.Softmax(dim=-1)
-        #self.Dropout = nn.Dropout(p=0.2)
-        '''
+        
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 # n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
