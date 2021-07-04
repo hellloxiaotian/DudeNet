@@ -69,7 +69,12 @@
 ### Color blind denoising
 #### python test_gc.py --num_of_layers 17 --logdir color_blind_noise --test_data Set68 --test_noiseL 15  
 ### -------------------------------------------------------------------------------------------------------
+### Train DuDeNet for real-noisy image denoising
 
+
+### Test DuDeNet for real-noisy image denoising
+
+### -------------------------------------------------------------------------------------------------------
 ### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
 
