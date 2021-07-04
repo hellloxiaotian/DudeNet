@@ -2,7 +2,6 @@
 ## Designing and Training of A Dual CNN for Image Denoising 
 ## This paper is conducted by Chunwei Tian, Yong Xu, Wangmeng Zuo, Bo Du, Chia-wen Lin and David Zhang. It is implemented by Pytorch. And it is reported by Cver at https://wx.zsxq.com/mweb/views/topicdetail/topicdetail.html?topic_id=841142121551482&group_id=142181451122&user_id=28514284588581&from=timeline. And it is  by Knowledge-based Systems (IF:8.038) in 2021. It can be found on https://www.sciencedirect.com/science/article/abs/pii/S0950705121002124 and https://arxiv.org/pdf/2007.03951.pdf.
 
-# The codes will be finished in 4, July, 2021. The running command will be updated. And real noisy dataset may be provided. 
 
 ## Absract
 ### Deep convolutional neural networks (CNNs) for image denoising have recently attracted increasing research interest. However, plain networks cannot recover ﬁne details for a complex task, such as real noisy images. In this paper, we propose a Dual denoising Network (DudeNet) to recover a clean image. Speciﬁcally, DudeNet consists of four modules: a feature extraction block, an enhancement block, a compression block, and a reconstruction block. The feature extraction block with a sparse mechanism extracts global and local features via two sub-networks. The enhancement block gathers and fuses the global and local features to provide complementary information for the latter network.The compression block reﬁnes the extracted information and compresses the network. Finally, the reconstruction block is utilized to reconstruct a denoised image. The DudeNet has the following advantages: (1) The dual networks with a parse mechanism can extract complementary features to enhance the generalized ability of denoiser. (2) Fusing global and local features can extract salient features to recover ﬁne details for complex noisy images. (3) A Small-size ﬁlter is used to reduce the complexity of denoiser. Extensive experiments demonstrate the superiority of DudeNet over existing current state-of-the-art denoising methods.
@@ -70,10 +69,14 @@
 #### python test_gc.py --num_of_layers 17 --logdir color_blind_noise --test_data Set68 --test_noiseL 15  
 ### -------------------------------------------------------------------------------------------------------
 ### Train DuDeNet for real-noisy image denoising
-
+### Copying training real noisy images into real_noisy/data
+#### python train_r.py --prepropcess True --num_of_layers 17 --mode S --noiseL 25 --val_noiseL 25  
+##### (Specifically, --val_noiseL 25 is not meaningful)  
 
 ### Test DuDeNet for real-noisy image denoising
-
+### Copying test real noisy images into real_noisy/data 
+#### python test_c.py --num_of_layers 17 --logdir real_model --test_data cc --test_noiseL 25 
+##### (Specifically, --test_noiseL 25 is not meaningful) 
 ### -------------------------------------------------------------------------------------------------------
 ### 1. Network architecture
 ![RUNOOB 图标](./results/fig1.jpg)
