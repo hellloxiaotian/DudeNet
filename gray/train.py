@@ -11,7 +11,7 @@ from torch.autograd import Variable
 from torch.utils.data import DataLoader
 #from tensorboardX import SummaryWriter
 from torch.nn.modules.loss import _Loss #TCW20180913TCW
-from models import DnCNN
+from models import DudeNet
 from dataset import prepare_data, Dataset
 from utils import *
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
@@ -65,7 +65,7 @@ def main():
     loader_train = DataLoader(dataset=dataset_train, num_workers=4, batch_size=opt.batchSize, shuffle=True)
     print("# of training samples: %d\n" % int(len(dataset_train)))
     # Build model
-    net = DnCNN(channels=1, num_of_layers=opt.num_of_layers)
+    net = DudeNet(channels=1, num_of_layers=opt.num_of_layers)
     #net.apply(weights_init_kaiming)
     criterion = nn.MSELoss(size_average=False)
     #criterion = sum_squared_error() #tcw20180913211tcw
