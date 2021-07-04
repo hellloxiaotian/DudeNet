@@ -25,7 +25,7 @@ def normalize(data):
 def main():
     # Build model
     print('Loading model ...\n')
-    net = DnCNN(channels=1, num_of_layers=opt.num_of_layers)
+    net = DudeNet(channels=1, num_of_layers=opt.num_of_layers)
     device_ids = [0]
     model = nn.DataParallel(net, device_ids=device_ids).cuda()
     model.load_state_dict(torch.load(os.path.join(opt.logdir, 'modelb_70.pth')))
