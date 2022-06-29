@@ -1,6 +1,6 @@
 # DudeNet
 ## Designing and Training of A Dual CNN for Image Denoising 
-## This paper is conducted by Chunwei Tian, Yong Xu, Wangmeng Zuo, Bo Du, Chia-wen Lin and David Zhang. It is implemented by Pytorch. And it is reported by Cver at https://wx.zsxq.com/mweb/views/topicdetail/topicdetail.html?topic_id=841142121551482&group_id=142181451122&user_id=28514284588581&from=timeline. And it is  by Knowledge-based Systems (IF:8.038) in 2021. It can be found on https://www.sciencedirect.com/science/article/abs/pii/S0950705121002124 and https://arxiv.org/pdf/2007.03951.pdf.
+## This paper is conducted by Chunwei Tian, Yong Xu, Wangmeng Zuo, Bo Du, Chia-wen Lin and David Zhang. It is implemented by Pytorch. And it is reported by Cver at https://wx.zsxq.com/mweb/views/topicdetail/topicdetail.html?topic_id=841142121551482&group_id=142181451122&user_id=28514284588581&from=timeline. And it is  by Knowledge-based Systems (IF:8.139) in 2021. It can be found on https://www.sciencedirect.com/science/article/abs/pii/S0950705121002124 and https://arxiv.org/pdf/2007.03951.pdf.
 
 
 ## Absract
